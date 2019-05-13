@@ -1,0 +1,10 @@
+{
+    "ConnectionStrings": {
+        "UniversityOffice0": "Server=127.0.0.1; Port=5432; Database=university_office_db; User Id=university_office_user; Password=02hradf80)_*#!"
+    },
+    "Cors": {
+        "Client": {
+            "Host": "http://127.0.0.1"
+        }
+    }
+}
