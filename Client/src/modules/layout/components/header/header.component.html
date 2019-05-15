@@ -1,0 +1,8 @@
+<header>
+    <button mat-button [matMenuTriggerFor]="menu">Entities</button>
+    <div>University office</div>
+</header>
+
+<mat-menu #menu>
+    <app-link-button *ngFor="let link of entityLinks" [entityLink]="link"></app-link-button>
+</mat-menu>

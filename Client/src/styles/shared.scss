@@ -1,0 +1,19 @@
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+}
+
+$breakpoints: 10 15 25 33 50 66 75 85 90 100;
+@each $breakpoint in $breakpoints {
+	.w-#{$breakpoint} {
+		width: #{$breakpoint}% !important;
+	}
+	
+	.h-#{$breakpoint} {
+		height: #{$breakpoint}% !important;
+	}
+}
