@@ -23,21 +23,21 @@ namespace UniversityOffice.Api.Migrations
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Department", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Abbreviation");
 
                     b.Property<string>("FullName");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Group", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("DepartmentId");
@@ -46,7 +46,7 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<int>("SpecialityId");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("DepartmentId");
 
@@ -57,7 +57,7 @@ namespace UniversityOffice.Api.Migrations
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Mark", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Comment");
@@ -70,7 +70,7 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<int>("TutorId");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("StudentId");
 
@@ -83,7 +83,7 @@ namespace UniversityOffice.Api.Migrations
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.PassportInfo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("Birthday");
@@ -100,14 +100,14 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<string>("Series");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("PassportInfos");
                 });
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Room", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<short>("Capacity");
@@ -116,14 +116,14 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<int>("Type");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.ScheduleItem", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("Day");
@@ -140,7 +140,7 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<int>("Week");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("GroupId");
 
@@ -155,7 +155,7 @@ namespace UniversityOffice.Api.Migrations
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.SessionResult", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTime>("CreatedAt");
@@ -168,7 +168,7 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<int>("TutorId");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("StudentId");
 
@@ -181,21 +181,21 @@ namespace UniversityOffice.Api.Migrations
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Speciality", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<short>("Code");
 
                     b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Specialities");
                 });
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Student", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("GroupId");
@@ -206,7 +206,7 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<string>("RecordBookSeries");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("GroupId");
 
@@ -217,7 +217,7 @@ namespace UniversityOffice.Api.Migrations
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.StudyPlan", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<short>("Credits");
@@ -226,7 +226,7 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<int>("SubjectId");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("GroupId");
 
@@ -237,19 +237,19 @@ namespace UniversityOffice.Api.Migrations
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Subject", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Subjects");
                 });
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.Tutor", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("AcademicDegree");
@@ -258,7 +258,7 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<int>("PassportInfoId");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("DepartmentId");
 

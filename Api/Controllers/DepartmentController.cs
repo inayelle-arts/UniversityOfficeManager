@@ -5,7 +5,6 @@ using UniversityOffice.Api.Interfaces;
 
 namespace UniversityOffice.Api.Controllers
 {
-	[Route("api/")]
 	[Route("api/departments")]
 	public sealed class DepartmentController : CrudControllerBase<Department>
 	{

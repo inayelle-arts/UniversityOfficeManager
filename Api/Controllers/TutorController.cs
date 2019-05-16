@@ -6,9 +6,9 @@ using UniversityOffice.Api.Interfaces;
 namespace UniversityOffice.Api.Controllers
 {
 	[Route("api/tutors")]
-	public sealed class TutorController : CrudControllerBase<Group>
+	public sealed class TutorController : CrudControllerBase<Tutor>
 	{
-		public TutorController(IRepository<Group> repository) : base(repository)
+		public TutorController(IRepository<Tutor> repository) : base(repository)
 		{
 		}
 	}

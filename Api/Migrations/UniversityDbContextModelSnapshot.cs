@@ -79,30 +79,6 @@ namespace UniversityOffice.Api.Migrations
                     b.ToTable("Marks");
                 });
 
-            modelBuilder.Entity("UniversityOffice.Api.Entities.PassportInfo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("Birthday");
-
-                    b.Property<string>("Code");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<int>("Gender");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<string>("MiddleName");
-
-                    b.Property<string>("Series");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PassportInfos");
-                });
-
             modelBuilder.Entity("UniversityOffice.Api.Entities.Room", b =>
                 {
                     b.Property<int>("Id")
@@ -196,19 +172,29 @@ namespace UniversityOffice.Api.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("Birthday");
+
+                    b.Property<string>("Code");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<int>("Gender");
+
                     b.Property<int>("GroupId");
 
-                    b.Property<int>("PassportInfoId");
+                    b.Property<string>("LastName");
+
+                    b.Property<string>("MiddleName");
 
                     b.Property<string>("RecordBookCode");
 
                     b.Property<string>("RecordBookSeries");
 
+                    b.Property<string>("Series");
+
                     b.HasKey("Id");
 
                     b.HasIndex("GroupId");
-
-                    b.HasIndex("PassportInfoId");
 
                     b.ToTable("Students");
                 });
@@ -252,15 +238,25 @@ namespace UniversityOffice.Api.Migrations
 
                     b.Property<string>("AcademicDegree");
 
+                    b.Property<DateTime>("Birthday");
+
+                    b.Property<string>("Code");
+
                     b.Property<int>("DepartmentId");
 
-                    b.Property<int>("PassportInfoId");
+                    b.Property<string>("FirstName");
+
+                    b.Property<int>("Gender");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<string>("MiddleName");
+
+                    b.Property<string>("Series");
 
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId");
-
-                    b.HasIndex("PassportInfoId");
 
                     b.ToTable("Tutors");
                 });
@@ -343,11 +339,6 @@ namespace UniversityOffice.Api.Migrations
                         .WithMany()
                         .HasForeignKey("GroupId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("UniversityOffice.Api.Entities.PassportInfo", "PassportInfo")
-                        .WithMany()
-                        .HasForeignKey("PassportInfoId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("UniversityOffice.Api.Entities.StudyPlan", b =>
@@ -368,11 +359,6 @@ namespace UniversityOffice.Api.Migrations
                     b.HasOne("UniversityOffice.Api.Entities.Department", "Department")
                         .WithMany()
                         .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("UniversityOffice.Api.Entities.PassportInfo", "PassportInfo")
-                        .WithMany()
-                        .HasForeignKey("PassportInfoId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

@@ -1,0 +1,19 @@
+<app-table-view [dataSource]="elements"
+                [columns]="columns"
+                (onDelete)="this.delete($event)"
+                (onUpdate)="this.edit($event)"></app-table-view>
+
+<ng-template #editForm>
+    <h2 class="w-100">Edit</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmitEdit()">
+        <mat-form-field *ngFor="let column of columns" class="w-100">
+            <mat-label>
+                {{column | uppercase}}
+            </mat-label>
+            <input matInput [ngModel]="editElement[column]" type="text" [formControlName]="column">
+        </mat-form-field>
+
+        <button type="submit" mat-button>Submit</button>
+    </form>
+</ng-template>

@@ -4,12 +4,12 @@ import { Department } from './department.entity';
 
 export class Group implements IEntity
 {
-	Id: number;
-	Name: string;
+	id: number;
+	name: string;
 
-	SpecialityId: number;
-	Speciality: Speciality;
+	specialityId: number;
+	speciality: Speciality;
 
-	DepartmentId: number;
-	Department: Department;
+	departmentId: number;
+	department: Department;
 }

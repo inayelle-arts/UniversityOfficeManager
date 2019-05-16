@@ -3,8 +3,8 @@ import { RoomType } from './room-type.entity';
 
 export class Room implements IEntity
 {
-	Id: number;
-	Code: string;
-	Capacity: number;
-	Type: RoomType;
+	id: number;
+	code: string;
+	capacity: number;
+	type: RoomType;
 }

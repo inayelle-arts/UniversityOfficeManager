@@ -8,20 +8,20 @@ import { Tutor } from './tutor.entity';
 
 export class ScheduleItem implements IEntity
 {
-	Id: number;
-	Day: DayOfWeek;
-	Week: Week;
-	OrderNumber: number;
+	id: number;
+	day: DayOfWeek;
+	week: Week;
+	orderNumber: number;
 
-	SubjectId: number;
-	Subject: Subject;
+	subjectId: number;
+	subject: Subject;
 
-	GroupId: number;
-	Group: Group;
+	groupId: number;
+	group: Group;
 
-	TutorId: number;
-	Tutor: Tutor;
+	tutorId: number;
+	tutor: Tutor;
 
-	RoomId: number;
-	Room: Room;
+	roomId: number;
+	room: Room;
 }

@@ -1,6 +1,6 @@
 export enum Week
 {
-	First,
-	Second,
-	Both
+	first,
+	second,
+	both
 }

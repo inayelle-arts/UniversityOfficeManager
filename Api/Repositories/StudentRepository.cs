@@ -16,7 +16,6 @@ namespace UniversityOffice.Api.Repositories
 		{
 			return await Context.Set<Student>()
 			                    .Include(s => s.Group)
-			                    .Include(s => s.PassportInfo)
 			                    .ToListAsync();
 		}
 
@@ -24,7 +23,6 @@ namespace UniversityOffice.Api.Repositories
 		{
 			return await Context.Set<Student>()
 			                    .Include(s => s.Group)
-			                    .Include(s => s.PassportInfo)
 			                    .FirstOrDefaultAsync(s => s.Id == id);
 		}
 	}

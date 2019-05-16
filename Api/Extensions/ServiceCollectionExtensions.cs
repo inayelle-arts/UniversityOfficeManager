@@ -14,7 +14,10 @@ namespace UniversityOffice.Api.Extensions
 	{
 		public static void AddApiMvc(this IServiceCollection services)
 		{
-			services.AddMvc(options => options.Filters.Add<ModelValidationFilter>());
+			services.AddMvc(options => options.Filters.Add<ModelValidationFilter>())
+			        .AddJsonOptions(options =>
+					        options.SerializerSettings.Converters.Add(
+							        new Newtonsoft.Json.Converters.StringEnumConverter()));
 		}
 
 		public static void AddClientCors(this IServiceCollection services, IConfiguration configuration)
@@ -40,7 +43,6 @@ namespace UniversityOffice.Api.Extensions
 			services.AddTransient<IRepository<Department>, DepartmentRepository>()
 			        .AddTransient<IRepository<Group>, GroupRepository>()
 			        .AddTransient<IRepository<Mark>, MarkRepository>()
-			        .AddTransient<IRepository<PassportInfo>, PassportInfoRepository>()
 			        .AddTransient<IRepository<Room>, RoomRepository>()
 			        .AddTransient<IRepository<ScheduleItem>, ScheduleRepository>()
 			        .AddTransient<IRepository<SessionResult>, SessionResultRepository>()

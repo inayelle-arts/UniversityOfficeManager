@@ -1,16 +1,22 @@
 import { IEntity } from '@interfaces/entity.interface';
-import { PassportInfo } from './passport-info.entity';
 import { Group } from './group.entity';
+import {Gender} from "@entities/gender.entity";
 
 export class Student implements IEntity
 {
-	Id: number;
-	RecordBookSeries: string;
-	RecordBookCode: string;
+	id: number;
+	
+	firstName: string;
+	middleName: string;
+	lastName: string;
+	series: string;
+	code: string;
+	birthday: Date | string;
+	gender: Gender;
+	
+	recordBookSeries: string;
+	recordBookCode: string;
 
-	PassportInfoId: number;
-	PassportInfo: PassportInfo;
-
-	GroupId: number;
-	Group: Group;
+	groupId: number;
+	group: Group;
 }

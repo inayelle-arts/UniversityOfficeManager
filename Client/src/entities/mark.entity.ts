@@ -5,16 +5,16 @@ import { Subject } from './subject.entity';
 
 export class Mark implements IEntity
 {
-	Id: number;
-	Comment: string;
-	CreatedAt: Date | string;
+	id: number;
+	comment: string;
+	createdAt: Date | string;
 
-	SubjectId: number;
-	Subject: Subject;
+	subjectId: number;
+	subject: Subject;
 
-	TutorId: number;
-	Tutor: Tutor;
+	tutorId: number;
+	tutor: Tutor;
 
-	StudentId: number;
-	Student: Student;
+	studentId: number;
+	student: Student;
 }

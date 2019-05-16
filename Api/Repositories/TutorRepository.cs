@@ -16,7 +16,6 @@ namespace UniversityOffice.Api.Repositories
 		{
 			return await Context.Set<Tutor>()
 			                    .Include(m => m.Department)
-			                    .Include(m => m.PassportInfo)
 			                    .ToListAsync();
 		}
 
@@ -24,7 +23,6 @@ namespace UniversityOffice.Api.Repositories
 		{
 			return await Context.Set<Tutor>()
 			                    .Include(m => m.Department)
-			                    .Include(m => m.PassportInfo)
 			                    .FirstOrDefaultAsync(m => m.Id == id);
 		}
 	}

@@ -32,12 +32,12 @@ export abstract class HttpServiceBase<TEntity extends IEntity>
 	
 	public update(entity: TEntity): Observable<TEntity>
 	{
-		return this.http.patch<TEntity>(HttpServiceBase.combineUrl(this.baseUrl, entity.Id), entity);
+		return this.http.patch<TEntity>(this.baseUrl, entity);
 	}
 	
 	public delete(entity: TEntity): Observable<TEntity>
 	{
-		return this.http.delete<TEntity>(HttpServiceBase.combineUrl(this.baseUrl, entity.Id));
+		return this.http.delete<TEntity>(HttpServiceBase.combineUrl(this.baseUrl, entity.id));
 	}
 	
 	protected static combineUrl(...args: any[]): string

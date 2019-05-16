@@ -4,6 +4,7 @@ import {MaterialModule} from "@modules/material/material.module";
 import {LinkButtonComponent} from './components/link-button/link-button.component';
 import {RouterModule} from "@angular/router";
 import {HeaderComponent} from './components/header/header.component';
+import {CrudModule} from "@modules/crud/crud.module";
 
 @NgModule({
 	declarations: [
@@ -16,6 +17,7 @@ import {HeaderComponent} from './components/header/header.component';
 	imports: [
 		CommonModule,
 		MaterialModule,
+		CrudModule,
 		RouterModule
 	]
 })

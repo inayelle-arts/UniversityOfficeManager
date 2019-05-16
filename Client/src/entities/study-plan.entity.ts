@@ -4,12 +4,12 @@ import { Subject } from './subject.entity';
 
 export class StudyPlan implements IEntity
 {
-	Id: number;
-	Credits: number;
+	id: number;
+	credits: number;
 
-	SubjectId: number;
-	Subject: Subject;
+	subjectId: number;
+	subject: Subject;
 
-	GroupId: number;
-	Group: Group;
+	groupId: number;
+	group: Group;
 }

@@ -1,6 +1,6 @@
 export enum RoomType
 {
-	Lecture,
-	Lab,
-	Practice
+	lecture = 'Lecture',
+	lab = 'Lab',
+	practice = 'Practice'
 }

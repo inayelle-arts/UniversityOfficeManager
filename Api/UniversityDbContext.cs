@@ -12,7 +12,6 @@ namespace UniversityOffice.Api
 		public DbSet<Department>    Departments    { get; set; }
 		public DbSet<Group>         Groups         { get; set; }
 		public DbSet<Mark>          Marks          { get; set; }
-		public DbSet<PassportInfo>  PassportInfos  { get; set; }
 		public DbSet<Room>          Rooms          { get; set; }
 		public DbSet<ScheduleItem>  Schedule       { get; set; }
 		public DbSet<SessionResult> SessionResults { get; set; }

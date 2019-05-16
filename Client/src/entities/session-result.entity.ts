@@ -5,16 +5,16 @@ import { Student } from './student.entity';
 
 export class SessionResult implements IEntity
 {
-	Id: number;
-	Mark: number;
-	CreatedAt: Date | string;
+	id: number;
+	mark: number;
+	createdAt: Date | string;
 
-	SubjectId: number;
-	Subject: Subject;
+	subjectId: number;
+	subject: Subject;
 
-	TutorId: number;
-	Tutor: Tutor;
+	tutorId: number;
+	tutor: Tutor;
 
-	StudentId: number;
-	Student: Student;
+	studentId: number;
+	student: Student;
 }

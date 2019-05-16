@@ -1,15 +1,21 @@
 import { IEntity } from '@interfaces/entity.interface';
-import { PassportInfo } from './passport-info.entity';
 import { Department } from './department.entity';
+import {Gender} from "@entities/gender.entity";
 
 export class Tutor implements IEntity
 {
-	Id: number;
-	AcademicDegree: string;
+	id: number;
+	
+	firstName: string;
+	middleName: string;
+	lastName: string;
+	series: string;
+	code: string;
+	birthday: Date | string;
+	gender: Gender;
+	
+	academicDegree: string;
 
-	PassportInfoId: number;
-	PassportInfo: PassportInfo;
-
-	DepartmentId: number;
-	Department: Department;
+	departmentId: number;
+	department: Department;
 }

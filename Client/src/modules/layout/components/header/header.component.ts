@@ -11,16 +11,48 @@ export class HeaderComponent
 	public readonly entityLinks: EntityLink[] =
 		[
 			{
-				label:'Label1',
-				link:'link1'
+				label: 'Rooms',
+				link: '/data/rooms'
 			},
 			{
-				label:'Label1',
-				link:'link1'
+				label: 'Subjects',
+				link: '/data/subjects'
 			},
 			{
-				label:'Label1',
-				link:'link1'
-			}
+				label: 'Specialities',
+				link: '/data/specialities'
+			},
+			{
+				label: 'Tutors',
+				link: '/data/tutors'
+			},
+			{
+				label: 'Departments',
+				link: '/data/departments'
+			},
+			{
+				label: 'Groups',
+				link: '/data/groups'
+			},
+			{
+				label: 'Marks',
+				link: '/data/marks'
+			},
+			{
+				label: 'Schedule',
+				link: '/data/schedule'
+			},
+			{
+				label: 'Session results',
+				link: '/data/session-results'
+			},
+			{
+				label: 'Students',
+				link: '/data/students'
+			},
+			{
+				label: 'Study plans',
+				link: '/data/study-plans'
+			},
 		];
 }
