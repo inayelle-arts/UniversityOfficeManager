@@ -21,6 +21,9 @@ export class TableViewComponent
 	@Output('onUpdate')
 	public readonly onUpdate: EventEmitter<IEntity> = new EventEmitter<IEntity>();
 	
+	@Output('onCreate')
+	public readonly onCreate: EventEmitter<void> = new EventEmitter<void>();
+	
 	public get columns(): string[]
 	{
 		return [...this._columns, 'actions'];
@@ -31,9 +34,14 @@ export class TableViewComponent
 		this.onDelete.emit(element);
 	}
 	
-	public update(element: IEntity) : void
+	public update(element: IEntity): void
 	{
 		this.onUpdate.emit(element);
+	}
+	
+	public create(): void
+	{
+		this.onCreate.emit();
 	}
 	
 	public get(element: IEntity, property: string): any

@@ -1,8 +1,0 @@
-<form>
-    <mat-form-field *ngFor="let column of columns">
-        <mat-label>
-            {{column | uppercase}}
-        </mat-label>
-        <input type="text" [formControlName]="column">
-    </mat-form-field>
-</form>

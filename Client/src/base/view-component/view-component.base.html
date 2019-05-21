@@ -1,17 +1,33 @@
 <app-table-view [dataSource]="elements"
                 [columns]="columns"
                 (onDelete)="this.delete($event)"
-                (onUpdate)="this.edit($event)"></app-table-view>
+                (onUpdate)="this.edit($event)"
+                (onCreate)="this.create()"></app-table-view>
 
-<ng-template #editForm>
+<ng-template #editFormTemplate>
     <h2 class="w-100">Edit</h2>
 
-    <form [formGroup]="form" (ngSubmit)="onSubmitEdit()">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmitEdit()">
         <mat-form-field *ngFor="let column of columns" class="w-100">
             <mat-label>
                 {{column | uppercase}}
             </mat-label>
             <input matInput [ngModel]="editElement[column]" type="text" [formControlName]="column">
+        </mat-form-field>
+
+        <button type="submit" mat-button>Submit</button>
+    </form>
+</ng-template>
+
+<ng-template #createFormTemplate>
+    <h2 class="w-100">Create</h2>
+
+    <form [formGroup]="createForm" (ngSubmit)="onSubmitCreate()">
+        <mat-form-field *ngFor="let column of createFields" class="w-100">
+            <mat-label>
+                {{column | uppercase}}
+            </mat-label>
+            <input matInput type="text" [formControlName]="column" required>
         </mat-form-field>
 
         <button type="submit" mat-button>Submit</button>
